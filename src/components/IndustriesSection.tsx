@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronRight } from "lucide-react";
+import Eyebrow from "@/components/shared/Eyebrow";
 
 interface IndustryItem {
   title: string;
@@ -164,6 +165,11 @@ export default function IndustriesSection() {
           <div className="absolute -bottom-32 -left-32 size-96 rounded-full bg-sky-500/10 blur-3xl pointer-events-none" />
 
           <div className="relative z-10 text-center">
+            {/* Eyebrow */}
+            <div className="mb-4">
+              <Eyebrow text="SECTORS & DOMAINS" variant="light" />
+            </div>
+
             {/* Main Headline */}
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold uppercase tracking-tight text-white">
               Industries We Serve

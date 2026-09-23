@@ -1,5 +1,7 @@
 export interface AboutStat {
-  value: string;
+  value: number;
+  suffix: string;
+  decimals?: number;
   label: string;
 }
 
@@ -15,9 +17,9 @@ export const aboutData = {
   eyebrow: "About Our Company",
   headline: "Precision Engineering & Manufacturing to Boost Your Production",
   stats: [
-    { value: "10k+", label: "Components Delivered" },
-    { value: "1.5k+", label: "Tooling & Moulds" },
-    { value: "24.1k+", label: "Completed Projects" },
+    { value: 10, suffix: "k+", decimals: 0, label: "Components Delivered" },
+    { value: 1.5, suffix: "k+", decimals: 1, label: "Tooling & Moulds" },
+    { value: 24.1, suffix: "k+", decimals: 1, label: "Completed Projects" },
   ] as AboutStat[],
   cards: [
     {

@@ -1,3 +1,4 @@
+import Eyebrow from "@/components/shared/Eyebrow";
 import { capabilitiesData } from "@/data/capabilities";
 
 export default function CapabilitiesSection() {
@@ -34,9 +35,8 @@ export default function CapabilitiesSection() {
         {/* Header Row */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14 lg:mb-16">
           <div>
-            <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-brand-orange mb-4">
-              <span>{capabilitiesData.eyebrow}</span>
-              <span className="h-0.5 w-12 bg-brand-orange inline-block" />
+            <div className="mb-4">
+              <Eyebrow text={capabilitiesData.eyebrow} />
             </div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.92] text-primary tracking-tight">
               {capabilitiesData.titlePre}
@@ -66,7 +66,7 @@ export default function CapabilitiesSection() {
           {capabilitiesData.items.map((item) => (
             <div
               key={item.title}
-              className="group relative rounded-xl border border-border/80 bg-background/95 p-4 sm:p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:border-brand-orange/40 hover:-translate-y-0.5 flex flex-col justify-between"
+              className="group relative rounded-xl border border-border bg-secondary/60 p-4 sm:p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-secondary/90 hover:border-brand-orange/40 hover:-translate-y-0.5 flex flex-col justify-between"
             >
               {/* Category Pill Tag */}
               <div className="flex items-center">
@@ -85,7 +85,7 @@ export default function CapabilitiesSection() {
                     {item.desc}
                   </p>
                 </div>
-                <div className="relative size-20 sm:size-24 shrink-0 rounded-lg overflow-hidden bg-secondary/30 border border-border/50 p-1.5 flex items-center justify-center">
+                <div className="relative size-20 sm:size-24 shrink-0 rounded-lg overflow-hidden bg-transparent flex items-center justify-center">
                   <span className="absolute top-1 left-1 text-[8px] font-mono text-muted-foreground/30 pointer-events-none select-none">+</span>
                   <span className="absolute bottom-1 right-1 text-[8px] font-mono text-muted-foreground/30 pointer-events-none select-none">+</span>
                   <img

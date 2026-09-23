@@ -1,5 +1,6 @@
-import { ArrowDownRight, ArrowRight, Ruler } from "lucide-react";
+import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Eyebrow from "@/components/shared/Eyebrow";
 import heroImage from "@/assets/cnc-hero.jpg";
 import { heroData } from "@/data/hero";
 
@@ -27,10 +28,9 @@ export default function HeroSection() {
       {/* Hero Content Container */}
       <div className="relative z-10 mx-auto flex flex-1 w-full max-w-7xl items-center px-5 py-12 sm:py-16 lg:py-20 lg:px-8">
         <div className="reveal-up max-w-3xl">
-          {/* Pill Eyebrow Badge */}
-          <div className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-slate-200 backdrop-blur-md shadow-sm">
-            <Ruler className="size-3.5 text-brand-orange" />
-            <span>{heroData.eyebrow}</span>
+          {/* Eyebrow Badge */}
+          <div className="mb-6">
+            <Eyebrow text={heroData.eyebrow} variant="light" />
           </div>
 
           {/* Main Headline */}

@@ -1,4 +1,5 @@
 import { BarChart3, Mail, MapPin, Phone, Settings, ShieldCheck } from "lucide-react";
+import Eyebrow from "@/components/shared/Eyebrow";
 import { footerData } from "@/data/footer";
 
 const featureIcons = [Settings, ShieldCheck, BarChart3];
@@ -23,8 +24,8 @@ export default function Footer() {
             </div>
 
             {/* Eyebrow */}
-            <div className="text-[11px] font-mono font-medium uppercase tracking-[0.24em] text-slate-300 mb-3">
-              {footerData.eyebrow}
+            <div className="mb-4">
+              <Eyebrow text={footerData.eyebrow} variant="light" />
             </div>
 
             {/* Main Headline */}
@@ -68,9 +69,8 @@ export default function Footer() {
           {/* ── RIGHT COLUMN (Contact Info taking full width) ── */}
           <div className="lg:col-span-7 lg:border-l lg:border-white/10 lg:pl-10 xl:pl-14 flex flex-col justify-center">
             {/* Eyebrow */}
-            <div className="flex items-center gap-3 text-xs font-bold uppercase tracking-widest text-[#FF5A00] mb-4">
-              <span className="h-[2px] w-7 bg-[#FF5A00] inline-block" />
-              <span>{footerData.contactKicker}</span>
+            <div className="mb-4">
+              <Eyebrow text={footerData.contactKicker} variant="brand" />
             </div>
 
             {/* Company Name & Address */}

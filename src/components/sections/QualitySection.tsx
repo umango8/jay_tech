@@ -1,4 +1,5 @@
 import { ArrowRight, Award, Layers, Settings, Target } from "lucide-react";
+import Eyebrow from "@/components/shared/Eyebrow";
 import { qualityData } from "@/data/quality";
 
 const pointIcons = [Target, Layers, Settings];
@@ -78,9 +79,8 @@ export default function QualitySection() {
             </div>
 
             {/* Kicker */}
-            <div className="mb-4 flex items-center gap-3 font-mono text-xs font-bold uppercase tracking-widest text-brand-orange">
-              <span className="h-[2px] w-7 bg-brand-orange" />
-              <span>{qualityData.kicker}</span>
+            <div className="mb-4">
+              <Eyebrow text={qualityData.kicker} />
             </div>
 
             {/* Main Headline */}

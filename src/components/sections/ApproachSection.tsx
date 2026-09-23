@@ -1,4 +1,5 @@
 import { CircleGauge, Search, Settings, ShieldCheck } from "lucide-react";
+import Eyebrow from "@/components/shared/Eyebrow";
 import { approachData } from "@/data/approach";
 
 const phaseIcons = [Search, Settings, CircleGauge, ShieldCheck];
@@ -12,9 +13,7 @@ export default function ApproachSection() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* Header row with Pill Badge and Title */}
         <div className="max-w-3xl mb-14 lg:mb-18">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-orange/30 bg-brand-orange/10 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-brand-orange">
-            {approachData.badge}
-          </span>
+          <Eyebrow text={approachData.badge} />
           <h2 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.98] text-primary">
             {approachData.title}
           </h2>

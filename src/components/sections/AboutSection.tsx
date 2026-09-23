@@ -1,5 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import qualityImage from "@/assets/quality-inspection.jpg";
+import AnimatedCounter from "@/components/shared/AnimatedCounter";
+import Eyebrow from "@/components/shared/Eyebrow";
 import { aboutData } from "@/data/about";
 
 const getImageSrc = (img: any): string =>
@@ -12,9 +14,9 @@ export default function AboutSection() {
         {/* Header & Stats Row */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-10 mb-14 lg:mb-16">
           <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-orange mb-3 block">
-              {aboutData.eyebrow}
-            </span>
+            <div className="mb-4">
+              <Eyebrow text={aboutData.eyebrow} />
+            </div>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.98] text-primary">
               {aboutData.headline}
             </h2>
@@ -24,7 +26,12 @@ export default function AboutSection() {
             {aboutData.stats.map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-orange leading-none">
-                  {stat.value}
+                  <AnimatedCounter
+                    end={stat.value}
+                    suffix={stat.suffix}
+                    decimals={stat.decimals ?? 0}
+                    duration={1800}
+                  />
                 </div>
                 <p className="mt-2 text-xs sm:text-sm text-muted-foreground font-medium leading-tight">
                   {stat.label}

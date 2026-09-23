@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import Eyebrow from "./Eyebrow";
 
 interface SectionTitleProps {
   label: string;
@@ -15,9 +16,8 @@ export default function SectionTitle({
 }: SectionTitleProps) {
   return (
     <div className={`max-w-3xl ${className}`}>
-      <div className="mb-5 flex items-center gap-3 text-xs font-bold uppercase text-brand-orange">
-        <span className="h-px w-8 bg-brand-orange" />
-        {label}
+      <div className="mb-4">
+        <Eyebrow text={label} />
       </div>
       <h2 className="font-display text-4xl font-semibold uppercase leading-[.95] text-primary sm:text-5xl lg:text-6xl">
         {title}
