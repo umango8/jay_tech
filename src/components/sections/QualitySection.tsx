@@ -1,5 +1,6 @@
 import { ArrowRight, Award, Layers, Settings, Target } from "lucide-react";
 import Eyebrow from "@/components/shared/Eyebrow";
+import { Button } from "@/components/ui/button";
 import { qualityData } from "@/data/quality";
 
 const pointIcons = [Target, Layers, Settings];
@@ -98,23 +99,19 @@ export default function QualitySection() {
             </div>
 
             {/* Action Buttons */}
-            <div className="mt-10 flex flex-wrap items-center gap-5 sm:gap-8">
-              <a
-                href={qualityData.ctaPrimary.href}
-                className="inline-flex items-center gap-2.5 rounded-xl bg-brand-orange px-7 py-4 text-xs font-bold uppercase tracking-wider text-white shadow-lg shadow-brand-orange/25 transition-all hover:translate-y-[-2px] hover:bg-brand-orange/90"
-              >
-                <span>{qualityData.ctaPrimary.label}</span>
-                <ArrowRight className="size-4" />
-              </a>
-              <a
-                href={qualityData.ctaSecondary.href}
-                className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground transition-colors hover:text-brand-orange"
-              >
-                <span className="border-b-2 border-foreground/80 pb-0.5 transition-colors group-hover:border-brand-orange">
-                  {qualityData.ctaSecondary.label}
-                </span>
-                <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-              </a>
+            <div className="mt-10 flex flex-wrap items-center gap-4 sm:gap-5">
+              <Button asChild size="lg" variant="orange">
+                <a href={qualityData.ctaPrimary.href} className="flex items-center gap-2">
+                  <span>{qualityData.ctaPrimary.label}</span>
+                  <ArrowRight className="size-4" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <a href={qualityData.ctaSecondary.href} className="flex items-center gap-2">
+                  <span>{qualityData.ctaSecondary.label}</span>
+                  <ArrowRight className="size-4" />
+                </a>
+              </Button>
             </div>
           </div>
         </div>

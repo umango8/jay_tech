@@ -222,8 +222,8 @@ export default function IndustriesSection() {
                     {item.title}
                   </h3>
 
-                  {/* Circle Chevron Button */}
-                  <div className="mt-4 flex size-7 sm:size-8 items-center justify-center rounded-full border border-white/40 text-white/80 transition-all duration-300 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white group-hover:scale-110 shadow-sm">
+                  {/* Chevron Button */}
+                  <div className="mt-4 flex size-7 sm:size-8 items-center justify-center rounded-none border border-white/40 text-white/80 transition-all duration-300 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white group-hover:scale-110">
                     <ChevronRight className="size-3.5 sm:size-4" />
                   </div>
                 </a>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import SectionTitle from "@/components/shared/SectionTitle";
 import {
   Carousel,
@@ -34,24 +35,28 @@ export default function ProductsSection() {
 
         <div className="relative">
           {/* Previous Button */}
-          <button
+          <Button
             type="button"
+            variant="orange"
+            size="iconLg"
             onClick={() => productCarouselApi?.scrollPrev()}
-            className="absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 size-12 sm:size-14 rounded-none bg-brand-orange text-white shadow-2xl transition-all duration-200 hover:scale-105 hover:brightness-110 active:scale-95 flex items-center justify-center cursor-pointer border border-brand-orange"
+            className="absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20 transition-transform duration-200 hover:scale-105 active:scale-95"
             aria-label="Previous product"
           >
             <ChevronLeft className="size-6 sm:size-7 text-white" />
-          </button>
+          </Button>
 
           {/* Next Button */}
-          <button
+          <Button
             type="button"
+            variant="orange"
+            size="iconLg"
             onClick={() => productCarouselApi?.scrollNext()}
-            className="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 z-20 size-12 sm:size-14 rounded-none bg-brand-orange text-white shadow-2xl transition-all duration-200 hover:scale-105 hover:brightness-110 active:scale-95 flex items-center justify-center cursor-pointer border border-brand-orange"
+            className="absolute right-0 translate-x-1/2 top-1/2 -translate-y-1/2 z-20 transition-transform duration-200 hover:scale-105 active:scale-95"
             aria-label="Next product"
           >
             <ChevronRight className="size-6 sm:size-7 text-white" />
-          </button>
+          </Button>
 
           <Carousel
             setApi={setProductCarouselApi}

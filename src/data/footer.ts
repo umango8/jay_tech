@@ -29,4 +29,6 @@ export const footerData = {
   locationTagline: "Precision engineering · Odhav, Ahmedabad · Est. 2007",
   precisionBadge: "BUILT ON PRECISION",
   copyrightYear: 2026,
+  craftedByName: "TruVixoo",
+  craftedByUrl: "https://truvixoo.com",
 };

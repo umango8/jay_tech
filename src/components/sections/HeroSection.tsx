@@ -51,7 +51,7 @@ export default function HeroSection() {
               asChild
               size="lg"
               variant="orange"
-              className="h-12 sm:h-14 px-8 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl shadow-lg shadow-brand-orange/25 transition-all hover:scale-[1.02]"
+              className="transition-transform hover:scale-[1.02]"
             >
               <a href={heroData.primaryCta.href} className="flex items-center gap-2">
                 {heroData.primaryCta.label} <ArrowRight className="size-4" />
@@ -60,8 +60,8 @@ export default function HeroSection() {
             <Button
               asChild
               size="lg"
-              variant="outline"
-              className="h-12 sm:h-14 px-8 text-xs sm:text-sm font-bold uppercase tracking-wider rounded-xl border-white/25 bg-white/10 text-white backdrop-blur-md hover:border-white/50 hover:bg-white/20 hover:text-white transition-all hover:scale-[1.02]"
+              variant="steelOutline"
+              className="backdrop-blur-md transition-transform hover:scale-[1.02]"
             >
               <a href={heroData.secondaryCta.href} className="flex items-center gap-2">
                 {heroData.secondaryCta.label} <ArrowDownRight className="size-4" />

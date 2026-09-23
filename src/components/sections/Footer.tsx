@@ -1,5 +1,6 @@
 import { BarChart3, Mail, MapPin, Phone, Settings, ShieldCheck } from "lucide-react";
 import Eyebrow from "@/components/shared/Eyebrow";
+import { Button } from "@/components/ui/button";
 import { footerData } from "@/data/footer";
 
 const featureIcons = [Settings, ShieldCheck, BarChart3];
@@ -100,33 +101,33 @@ export default function Footer() {
             {/* 3 Action Buttons */}
             <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4">
               {/* Call Button (Solid Orange) */}
-              <a
-                href={`tel:${footerData.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-md bg-[#FF5A00] hover:bg-[#e04e00] text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
-              >
-                <Phone className="size-4 fill-white" />
-                <span>Call</span>
-              </a>
+              <Button asChild variant="orange" size="default">
+                <a href={`tel:${footerData.phoneRaw}`} className="flex items-center gap-2">
+                  <Phone className="size-4 fill-white" />
+                  <span>Call</span>
+                </a>
+              </Button>
 
-              {/* Email Button (Outline) */}
-              <a
-                href={`mailto:${footerData.email}`}
-                className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-md border border-slate-400/50 hover:border-white bg-transparent hover:bg-white/10 text-white text-xs font-bold uppercase tracking-wider transition-colors"
-              >
-                <Mail className="size-4" />
-                <span>Email</span>
-              </a>
+              {/* Email Button (Steel Outline) */}
+              <Button asChild variant="steelOutline" size="default">
+                <a href={`mailto:${footerData.email}`} className="flex items-center gap-2">
+                  <Mail className="size-4" />
+                  <span>Email</span>
+                </a>
+              </Button>
 
-              {/* Get Directions Button (Outline) */}
-              <a
-                href={footerData.googleMapsUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 h-11 px-6 rounded-md border border-slate-400/50 hover:border-white bg-transparent hover:bg-white/10 text-white text-xs font-bold uppercase tracking-wider transition-colors"
-              >
-                <MapPin className="size-4" />
-                <span>Get Directions</span>
-              </a>
+              {/* Get Directions Button (Steel Outline) */}
+              <Button asChild variant="steelOutline" size="default">
+                <a
+                  href={footerData.googleMapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MapPin className="size-4" />
+                  <span>Get Directions</span>
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -141,10 +142,17 @@ export default function Footer() {
             <span>{footerData.locationTagline}</span>
           </div>
             <div className="text-xs sm:text-[13px] text-slate-300 font-sans tracking-normal text-center md:text-left">
-            <span>Crafted by </span>
-            <strong className="font-bold text-white transition-colors hover:text-[#FF5A00]">
-              TruVixoo
-            </strong>
+            <a
+              href={footerData.craftedByUrl || "https://truvixoo.com"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 transition-colors hover:text-white group"
+            >
+              <span>Crafted by</span>
+              <strong className="font-bold text-white transition-colors group-hover:text-[#FF5A00] underline-offset-2 group-hover:underline">
+                {footerData.craftedByName || "TruVixoo"}
+              </strong>
+            </a>
             <span className="mx-2 text-slate-500">•</span>
             <span>
               Copyright © {footerData.copyrightYear} {footerData.companyName}. All rights reserved.

@@ -1,7 +1,3 @@
-import heroImage from "@/assets/cnc-hero.jpg";
-import componentsImage from "@/assets/precision-components.jpg";
-import toolingImage from "@/assets/tooling-moulds.jpg";
-import qualityImage from "@/assets/quality-inspection.jpg";
 
 export interface ProductSpecItem {
   label: string;
@@ -36,7 +32,7 @@ export const productsData: ProductItem[] = [
     desc: "Custom engineered injection moulding dies designed for high repeatability, thermal balance, and tight-tolerance plastic components.",
     overview:
       "Our injection moulding dies are purpose-built for high-volume thermoplastic and engineering polymer processing. We combine hot runner/cold runner flow analysis, precision CNC electrode EDM machining, and hardened cavity inserts to deliver minimal flash, exceptional thermal consistency, and dependable cycle times across millions of shots.",
-    image: toolingImage,
+    image: "/images/products/injection-moulding-die.jpg",
     thumb: "/images/products/injection-moulding-die.jpg",
     number: "01",
     category: "Moulding Dies",
@@ -75,7 +71,7 @@ export const productsData: ProductItem[] = [
     desc: "Purpose-built blow moulding tooling for durable, uniform wall-thickness bottles, containers, and industrial packaging.",
     overview:
       "Jay Tech Industries designs and manufactures high-performance extrusion and stretch blow moulding dies. We engineer precision pinch-off cut-offs, rapid neck-ring calibration, and optimized cavity venting to guarantee uniform material distribution, structural seam integrity, and leak-free closures for high-speed automated packaging lines.",
-    image: toolingImage,
+    image: "/images/products/blow-moulding-die.jpg",
     thumb: "/images/products/blow-moulding-die.jpg",
     number: "02",
     category: "Moulding Dies",
@@ -113,7 +109,7 @@ export const productsData: ProductItem[] = [
     desc: "High-precision plastic moulding dies crafted for complex multi-cavity geometries and long production lifespans.",
     overview:
       "Crafted with microscopic precision on our high-speed VMC and CNC wire cut equipment, our general plastic moulding dies cover complex custom profiles, threaded components, unscrewing cores, and slide-action geometries with flawless parting-line match and zero flash.",
-    image: componentsImage,
+    image: "/images/products/plastic-moulding-die.jpg",
     thumb: "/images/products/plastic-moulding-die.jpg",
     number: "03",
     category: "Moulding Dies",
@@ -149,7 +145,7 @@ export const productsData: ProductItem[] = [
     desc: "Heavy-duty compression and transfer rubber moulds manufactured to resist wear and maintain strict dimensional accuracy.",
     overview:
       "Engineered to withstand the demanding thermal and mechanical pressures of rubber vulcanization, our rubber compression and transfer moulds are built with robust high-carbon steels. We calculate thermal expansion coefficients precisely to ensure finished rubber elastomeric parts shrink accurately to print.",
-    image: toolingImage,
+    image: "/images/products/rubber-moulding-die.jpg",
     thumb: "/images/products/rubber-moulding-die.jpg",
     number: "04",
     category: "Moulding Dies",
@@ -185,7 +181,7 @@ export const productsData: ProductItem[] = [
     desc: "Advanced runner and gate design dies tailored for precision engineering plastics and automotive components.",
     overview:
       "Designed specifically for high-stress engineering resins (PA66, PBT, Polycarbonate, POM), our precision plastic injection dies incorporate multi-stage hot runners, wear-resistant carbide gates, and automated core pulling cylinders to manufacture critical mechanical assemblies.",
-    image: componentsImage,
+    image: "/images/products/plastic-injection-die.jpg",
     thumb: "/images/products/plastic-injection-die.jpg",
     number: "05",
     category: "Moulding Dies",
@@ -220,7 +216,8 @@ export const productsData: ProductItem[] = [
     desc: "Power press punching, piercing, and bracket cutting dies built for high-speed stamping and clean shearing edges.",
     overview:
       "We design and build progressive, compound, and single-stroke sheet metal blanking and cutting dies. Built from premium high-speed tool steels with tight clearance calculations, our tooling delivers clean shear edges, burr-free profiles, and extended regrind intervals.",
-    image: heroImage,
+    image: "/images/products/sheet-metal-cutting-die.jpg",
+    thumb: "/images/products/sheet-metal-cutting-die.jpg",
     number: "06",
     category: "Cutting Dies",
     tolerances: "±0.005 mm (Clearance matched to material thickness)",
@@ -255,7 +252,8 @@ export const productsData: ProductItem[] = [
     desc: "3-axis & 4-axis vertical machining center (VMC) milling services delivering micro-level precision on complex components.",
     overview:
       "Our contract VMC milling facility provides high-speed, rigid 3-axis and 4-axis machining for prototypes and volume production batches. Equipped with modern spindle tooling, Renishaw probing, and CAM path optimization, we handle intricate geometries in ferrous, non-ferrous, and superalloys.",
-    image: heroImage,
+    image: "/images/products/vmc-machining-job-work.jpg",
+    thumb: "/images/products/vmc-machining-job-work.jpg",
     number: "07",
     category: "Job Work",
     tolerances: "±0.005 mm",
@@ -290,7 +288,8 @@ export const productsData: ProductItem[] = [
     desc: "Controlled spark erosion and CNC wire-cut EDM job work for hardened steels, fine holes, and intricate profiles.",
     overview:
       "For conductive metals that cannot be milled by conventional rotary tooling, our CNC wire electrical discharge machining (EDM) and hole drill services provide spark erosion precision. We slice through hardened tool steels, carbide, and titanium with zero mechanical tool pressure and taper control.",
-    image: qualityImage,
+    image: "/images/products/edm-drill-wire-cut-job-work.jpg",
+    thumb: "/images/products/edm-drill-wire-cut-job-work.jpg",
     number: "08",
     category: "Job Work",
     tolerances: "±0.003 mm",
@@ -325,7 +324,8 @@ export const productsData: ProductItem[] = [
     desc: "Custom manufacturing fixtures, workholding systems, and inspection gauges designed to secure parts and improve repeatability.",
     overview:
       "We design and build production-ready mechanical, pneumatic, and hydraulic workholding jigs, welding fixtures, assembly nests, and Go/No-Go checking gauges. Every fixture is engineered according to your part drawing to clamp securely, eradicate vibration, and streamline factory cycle times.",
-    image: toolingImage,
+    image: "/images/products/jig-fixtures-manufacturing.jpg",
+    thumb: "/images/products/jig-fixtures-manufacturing.jpg",
     number: "09",
     category: "Tooling & Fixtures",
     tolerances: "±0.005 mm (Locating Pins)",
@@ -360,7 +360,8 @@ export const productsData: ProductItem[] = [
     desc: "Close-tolerance components engineered for dependable fit, fine surface finish, and repeatable assembly performance.",
     overview:
       "We produce custom mechanical shafts, flanges, bushings, manifolds, valve bodies, and aerospace brackets to rigorous customer specifications. Our comprehensive quality process verifies concentricity, runout, thread depth, and surface roughness before dispatch.",
-    image: componentsImage,
+    image: "/images/products/precision-machine-components.jpg",
+    thumb: "/images/products/precision-machine-components.jpg",
     number: "10",
     category: "Precision Components",
     tolerances: "±0.003 mm to ±0.008 mm",
