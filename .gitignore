@@ -8,6 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.next/
+out/
+build/
 dist
 dist-ssr
 .output
@@ -15,6 +18,7 @@ dist-ssr
 .tanstack/**
 .nitro
 *.local
+*.tsbuildinfo
 
 # Wrangler / Cloudflare
 .wrangler/

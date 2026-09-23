@@ -1160,14 +1160,11 @@ export default function Home() {
             <div className="lg:col-span-5 flex flex-col justify-between">
               {/* Logo matching screenshot: // JAY TECH® INDUSTRIES */}
               <div className="mb-7">
-                <svg viewBox="0 0 250 56" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-11 sm:h-12 w-auto">
-                  <path d="M4 36 L15 8 H23 L12 36 H4 Z" fill="#FF5A00" />
-                  <path d="M16 36 L27 8 H35 L24 36 H16 Z" fill="#FF5A00" />
-                  <text x="44" y="34" fill="#FF5A00" fontFamily="var(--font-display), sans-serif" fontWeight="800" fontStyle="italic" fontSize="33" letterSpacing="0.5">JAY</text>
-                  <text x="105" y="34" fill="#FFFFFF" fontFamily="var(--font-display), sans-serif" fontWeight="800" fontStyle="italic" fontSize="33" letterSpacing="0.5">TECH</text>
-                  <text x="180" y="17" fill="#FFFFFF" fontFamily="sans-serif" fontWeight="bold" fontSize="9.5">®</text>
-                  <text x="45" y="49" fill="#FFFFFF" fontFamily="var(--font-sans), sans-serif" fontWeight="600" fontSize="9.5" letterSpacing="0.32em">INDUSTRIES</text>
-                </svg>
+                  <img
+              src="/images/jay-tech-industries-logo-white.png"
+              alt="Jay Tech Industries"
+              className="h-12 w-auto max-w-[220px] object-contain object-left sm:h-14 sm:max-w-[280px]"
+            />
               </div>
 
               {/* Eyebrow */}
