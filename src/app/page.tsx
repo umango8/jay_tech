@@ -1,5 +1,6 @@
 import Navbar from "@/components/sections/Navbar";
 import HeroSection from "@/components/sections/HeroSection";
+import PartnersSection from "@/components/sections/PartnersSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProductsSection from "@/components/sections/ProductsSection";
 import CapabilitiesSection from "@/components/sections/CapabilitiesSection";
@@ -15,6 +16,7 @@ export default function Home() {
     <main className="bg-background text-foreground">
       <Navbar />
       <HeroSection />
+      <PartnersSection />
       <AboutSection />
       <ProductsSection />
       <CapabilitiesSection />

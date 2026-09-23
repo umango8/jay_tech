@@ -71,7 +71,7 @@ const industries: IndustryItem[] = [
     ),
   },
   {
-    title: "Telecom",
+    title: "Plastic Mould",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -83,13 +83,31 @@ const industries: IndustryItem[] = [
         className="size-12 sm:size-14 text-white group-hover:text-brand-orange transition-colors"
         aria-hidden="true"
       >
-        <circle cx="32" cy="22" r="5" />
-        <path d="M20 22 A12 12 0 0 1 44 22" />
-        <path d="M14 22 A18 18 0 0 1 50 22" />
-        <path d="M32 27 L32 60" />
-        <path d="M22 60 L32 27 L42 60" />
-        <path d="M26 46 L38 46" />
-        <path d="M28 36 L36 36" />
+        {/* Top Injection Sprue Nozzle */}
+        <path d="M28 6 L36 6 L34 12 L30 12 Z" />
+        <line x1="32" y1="6" x2="32" y2="18" />
+
+        {/* Top Die Half (Cavity Plate) */}
+        <rect x="14" y="12" width="36" height="15" rx="1.5" />
+        {/* Cavity Impression */}
+        <path d="M24 27 C24 20 40 20 40 27" />
+
+        {/* Precision Guide Pillars (Left & Right) */}
+        <rect x="9" y="14" width="4" height="36" rx="1" />
+        <rect x="51" y="14" width="4" height="36" rx="1" />
+
+        {/* Die Parting Line */}
+        <line x1="6" y1="32" x2="58" y2="32" strokeDasharray="3 2" opacity="0.6" />
+
+        {/* Bottom Die Half (Core Plate) */}
+        <rect x="14" y="37" width="36" height="15" rx="1.5" />
+        {/* Core Impression */}
+        <path d="M26 37 C26 31 38 31 38 37" />
+
+        {/* Ejector Plate Base & Pins */}
+        <path d="M12 55 L52 55" />
+        <line x1="22" y1="52" x2="22" y2="55" />
+        <line x1="42" y1="52" x2="42" y2="55" />
       </svg>
     ),
   },
@@ -156,7 +174,7 @@ export default function IndustriesSection() {
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* Deep Industrial Navy Card matching reference screenshot */}
-        <div className="relative overflow-hidden rounded-3xl lg:rounded-[40px] bg-[#0c3c6d] p-8 sm:p-12 lg:p-16 text-white shadow-2xl">
+        <div className="relative overflow-hidden rounded-[8px] sm:rounded-[16px] bg-[#0c3c6d] p-8 sm:p-12 lg:p-16 text-white shadow-2xl">
           {/* Subtle blueprint grid overlay */}
           <div className="blueprint-grid absolute inset-0 opacity-15 pointer-events-none invert" />
 
@@ -181,7 +199,7 @@ export default function IndustriesSection() {
             {/* Sub-paragraph matching user reference text */}
             <p className="mx-auto max-w-3xl text-sm sm:text-base leading-relaxed text-slate-200">
               At Jay Tech Industries, we manufacture highly precision-led components for a vast range of
-              industries from aviation and space to defence, telecommunication, motorsport as well as
+              industries from aviation and space to defence, plastic moulding, motorsport as well as
               general engineering industries. As per their unique requirements, we provide a solution
               that is best suited to their industry.
             </p>

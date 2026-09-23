@@ -73,7 +73,7 @@ export default function HeroSection() {
 
       {/* Bottom Coordinates Strip */}
       <div className="relative z-20 border-t border-white/15 bg-black/85 backdrop-blur-md">
-        <div className="mx-auto grid max-w-7xl grid-cols-3 divide-x divide-white/15">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 sm:grid-cols-4 divide-x divide-white/15">
           {heroData.coordinates.map((item) => (
             <div key={item.label} className="px-5 sm:px-8 py-4">
               <span className="block text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-widest text-slate-400">

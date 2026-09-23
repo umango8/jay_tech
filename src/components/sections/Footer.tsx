@@ -133,16 +133,32 @@ export default function Footer() {
       </div>
 
       {/* ── BOTTOM STRIP ── */}
-      <div className="border-t border-white/10 py-5">
-        <div className="mx-auto flex max-w-[1440px] flex-col sm:flex-row items-center justify-between gap-4 px-6 lg:px-12 text-xs text-slate-400 font-mono">
-          <span>© {footerData.copyrightYear} {footerData.companyName}</span>
-          <span>{footerData.locationTagline}</span>
-          <div className="flex items-center gap-2.5 text-slate-400">
-            <span className="h-px w-6 bg-[#FF5A00] inline-block" />
-            <span className="font-bold tracking-widest text-[11px] text-slate-300">
-              {footerData.precisionBadge}
+      <div className=" bg-[#062446] py-3">
+        <div className="mx-auto flex max-w-[1440px] flex-col md:flex-row items-center justify-between gap-4 px-6 lg:px-12">
+          {/* Crafted by Badge matching user reference image */}
+
+          <div className="flex items-center gap-4 text-xs text-slate-400 font-mono">
+            <span>{footerData.locationTagline}</span>
+          </div>
+            <div className="text-xs sm:text-[13px] text-slate-300 font-sans tracking-normal text-center md:text-left">
+            <span>Crafted by </span>
+            <strong className="font-bold text-white transition-colors hover:text-[#FF5A00]">
+              TruVixoo
+            </strong>
+            <span className="mx-2 text-slate-500">•</span>
+            <span>
+              Copyright © {footerData.copyrightYear} {footerData.companyName}. All rights reserved.
             </span>
           </div>
+          <div>
+            <div className="hidden sm:flex items-center gap-2 text-slate-400">
+              <span className="h-px w-5 bg-[#FF5A00] inline-block" />
+              <span className="font-bold tracking-widest text-[11px] text-slate-300">
+                {footerData.precisionBadge}
+              </span>
+            </div>
+          </div>
+        
         </div>
       </div>
     </footer>

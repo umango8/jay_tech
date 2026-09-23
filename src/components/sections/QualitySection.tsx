@@ -14,9 +14,9 @@ export default function QualitySection() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14 xl:gap-16">
           {/* Left Column: Inspection Photo with Overlays */}
           <div className="relative lg:col-span-6">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[28px] sm:rounded-[34px] border border-border/60 shadow-2xl lg:aspect-[1.12/1]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[8px] sm:rounded-[16px] border border-border/60 shadow-2xl lg:aspect-[1.12/1]">
               <img
-                src="/images/quality-inspection-detail.jpg"
+                src="\images\qualtity_image.png"
                 alt="Precision component quality inspection with digital caliper"
                 loading="lazy"
                 width={1408}
@@ -33,30 +33,7 @@ export default function QualitySection() {
               </div>
 
               {/* Floating Bottom-Left Mindset Card */}
-              <div className="absolute bottom-5 left-5 z-20 max-w-[270px] rounded-2xl border border-border/80 bg-card/95 p-5 shadow-2xl backdrop-blur-md sm:bottom-7 sm:left-7 sm:max-w-[310px] sm:p-6">
-                <div className="flex items-start gap-3.5">
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-brand-orange/30 bg-brand-orange/10 text-brand-orange">
-                    <Award className="size-6 stroke-[1.8]" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold leading-snug text-foreground">
-                      {qualityData.mindset.heading}
-                    </h4>
-                    <p className="mt-1 text-xs text-muted-foreground">
-                      {qualityData.mindset.subheading}
-                    </p>
-                  </div>
-                </div>
-                <div className="mt-4 flex items-center gap-3 border-t border-border/70 pt-3.5 sm:mt-5 sm:pt-4">
-                  <span className="font-display text-2xl font-bold tracking-tight text-foreground">
-                    {qualityData.mindset.score}
-                  </span>
-                  <div className="h-px flex-1 bg-border/80" />
-                  <span className="font-mono text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
-                    {qualityData.mindset.label}
-                  </span>
-                </div>
-              </div>
+           
             </div>
           </div>
 
@@ -102,7 +79,7 @@ export default function QualitySection() {
                 return (
                   <div
                     key={point.title}
-                    className="group flex items-start gap-4 rounded-xl border border-transparent p-2 transition-colors hover:border-border/40 hover:bg-muted/30 sm:items-center sm:gap-5"
+                    className="group flex items-start gap-4 rounded-[8px] sm:rounded-[16px] border border-transparent p-2 transition-colors hover:border-border/40 hover:bg-muted/30 sm:items-center sm:gap-5"
                   >
                     <div className="flex size-13 shrink-0 items-center justify-center rounded-2xl border border-brand-orange/25 bg-brand-orange/10 text-brand-orange shadow-sm transition-all group-hover:scale-105 group-hover:border-brand-orange/40 group-hover:bg-brand-orange/15 sm:size-14">
                       <Icon className="size-6 stroke-[1.8]" />

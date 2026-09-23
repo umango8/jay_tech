@@ -4,12 +4,12 @@ export interface CoordinateMetric {
 }
 
 export const heroData = {
-  eyebrow: "Ahmedabad · Precision Engineering",
+  eyebrow: "Established in 2007 · Ahmedabad Precision Engineering",
   headlinePre: "Precision engineering built for",
   headlineHighlight: "real-world",
   headlinePost: "manufacturing.",
   subtitle:
-    "Precision machining, tools, dies, moulds, fixtures and engineering solutions from Ahmedabad.",
+    "Established in 2007. Precision machining, tools, dies, moulds, fixtures and engineering solutions from Ahmedabad.",
   primaryCta: {
     label: "Request a Quote",
     href: "#quote",
@@ -19,6 +19,7 @@ export const heroData = {
     href: "#products",
   },
   coordinates: [
+    { label: "Established", value: "2007" },
     { label: "Coordinate", value: "AHMEDABAD" },
     { label: "Discipline", value: "PRECISION" },
     { label: "Focus", value: "PRACTICALITY" },

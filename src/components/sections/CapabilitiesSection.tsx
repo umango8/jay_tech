@@ -66,7 +66,7 @@ export default function CapabilitiesSection() {
           {capabilitiesData.items.map((item) => (
             <div
               key={item.title}
-              className="group relative rounded-xl border border-border bg-secondary/60 p-4 sm:p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-secondary/90 hover:border-brand-orange/40 hover:-translate-y-0.5 flex flex-col justify-between"
+              className="group relative rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/60 p-4 sm:p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-secondary/90 hover:border-brand-orange/40 hover:-translate-y-0.5 flex flex-col justify-between"
             >
               {/* Category Pill Tag */}
               <div className="flex items-center">

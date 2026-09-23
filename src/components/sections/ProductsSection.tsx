@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import SectionTitle from "@/components/shared/SectionTitle";
 import {
@@ -66,7 +67,7 @@ export default function ProductsSection() {
                   key={item.name}
                   className="pl-5 basis-full sm:basis-1/2 lg:basis-1/3"
                 >
-                  <article className="group relative h-[480px] sm:h-[500px] overflow-hidden rounded-3xl bg-primary shadow-sm border border-border flex flex-col justify-end p-7 transition-all duration-500 hover:shadow-xl">
+                  <article className="group relative h-[480px] sm:h-[500px] overflow-hidden rounded-[8px] sm:rounded-[16px] bg-primary shadow-sm border border-border flex flex-col justify-end p-7 transition-all duration-500 hover:shadow-xl">
                     <img
                       src={getImageSrc(item.image)}
                       alt={item.name}
@@ -86,24 +87,29 @@ export default function ProductsSection() {
                         </span>
                       )}
                       <h3 className="font-display text-3xl font-semibold uppercase leading-tight">
-                        {item.name}
+                        <Link
+                          href={`/products/${item.slug}`}
+                          className="hover:text-brand-orange transition-colors"
+                        >
+                          {item.name}
+                        </Link>
                       </h3>
                       <p className="mt-3 text-sm leading-relaxed text-primary-foreground/80 line-clamp-2">
                         {item.desc}
                       </p>
                       <div className="mt-6 flex items-center gap-5 pt-5 border-t border-white/15">
-                        <a
-                          href="#capabilities"
-                          className="flex items-center gap-1.5 text-xs font-bold text-primary-foreground/90 transition hover:text-primary-foreground"
+                        <Link
+                          href={`/products/${item.slug}`}
+                          className="flex items-center gap-1.5 text-xs font-bold text-primary-foreground/90 transition hover:text-brand-orange"
                         >
                           View Details <ChevronRight className="size-3.5" />
-                        </a>
-                        <a
-                          href="#quote"
+                        </Link>
+                        <Link
+                          href={`/products/${item.slug}#inquire`}
                           className="flex items-center gap-1.5 text-xs font-bold text-brand-orange transition hover:brightness-110"
                         >
                           Get a Quote <ArrowRight className="size-3.5" />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </article>

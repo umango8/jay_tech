@@ -269,5 +269,28 @@
   .step-line-1,
   .step-line-2,
   .step-line-3 { animation: none; stroke-dashoffset: 0; }
+  .animate-marquee { animation: none !important; }
+}
+
+/* Infinite Marquee Slider with Pause on Hover */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.marquee-group:hover .animate-marquee {
+  animation-play-state: paused !important;
 }
 

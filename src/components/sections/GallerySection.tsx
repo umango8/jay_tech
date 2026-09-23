@@ -18,7 +18,7 @@ export default function GallerySection() {
               loading="lazy"
               width={1408}
               height={1008}
-              className={item.className}
+              className={`${item.className} rounded-[8px] sm:rounded-[16px]`}
             />
           ))}
         </div>
