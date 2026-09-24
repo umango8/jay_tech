@@ -43,14 +43,15 @@ export async function sendQuoteEmails(data: QuoteFormData): Promise<SendMailResu
   const adminContent = renderAdminQuoteEmail(data);
   const clientContent = renderClientQuoteEmail(data);
 
-  const logoPath = path.join(process.cwd(), "public/images/jay-tech-industries-logo-white.webp");
+  const logoPath = path.join(process.cwd(), "public/images/jay-tech-industries-logo-white.png");
   const logoExists = fs.existsSync(logoPath);
   const logoAttachment = logoExists
     ? [
         {
-          filename: "jay-tech-industries-logo.webp",
+          filename: "jay-tech-industries-logo.png",
           path: logoPath,
           cid: "jaytech-logo",
+          contentType: "image/png",
         },
       ]
     : [];

@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     },
   };
 
-  const options = { logoSrc: "/images/jay-tech-industries-logo-white.webp" };
+  const options = { logoSrc: "/images/jay-tech-industries-logo-white.png" };
   const rendered =
     template === "admin"
       ? renderAdminQuoteEmail(sampleData, options)
