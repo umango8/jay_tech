@@ -10,7 +10,7 @@ export const quoteData = {
   title: "Bring us your manufacturing requirement.",
   copy: "Share your requirement or drawing. We’ll review the details and respond to discuss the right engineering approach.",
   fileHelper: "Drawing and file attachments are welcome.",
-  acceptedFiles: ".pdf,.dwg,.dxf,.step,.stp,.jpg,.jpeg,.png",
+  acceptedFiles: ".pdf,.dwg,.dxf,.step,.stp,.jpg,.jpeg,.png,.webp",
   fields: [
     { label: "Name", type: "text", required: true, maxLength: 100 },
     { label: "Company", type: "text", required: false, maxLength: 100 },

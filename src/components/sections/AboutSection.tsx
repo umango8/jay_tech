@@ -1,5 +1,5 @@
 import { Factory } from "lucide-react";
-import qualityImage from "@/assets/quality-inspection.jpg";
+import qualityImage from "@/assets/quality-inspection.webp";
 import AnimatedCounter from "@/components/shared/AnimatedCounter";
 import Eyebrow from "@/components/shared/Eyebrow";
 import { aboutData } from "@/data/about";
@@ -17,8 +17,10 @@ export default function AboutSection() {
             <div className="mb-4">
               <Eyebrow text={aboutData.eyebrow} />
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.98] text-primary">
-              {aboutData.headline}
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.95] tracking-tight text-primary">
+              Technology Oriented Company
+              <br className="hidden sm:inline" />
+              Promoted by Technocrats.
             </h2>
           </div>
 
@@ -44,7 +46,7 @@ export default function AboutSection() {
         {/* Narrative & Visual Content (Card design removed) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Column: Plant Image */}
-          <div className="lg:col-span-5 relative min-h-[420px] lg:min-h-[500px] h-full rounded-[8px] sm:rounded-[16px] overflow-hidden shadow-sm border border-border group bg-secondary">
+          <div className="lg:col-span-5 relative min-h-[420px] lg:min-h-[500px] h-full rounded-[8px] lg:rounded-[16px] overflow-hidden shadow-sm border border-border group bg-secondary">
             <img
               src={getImageSrc(qualityImage)}
               alt="Jay Tech Industries engineering and precision manufacturing"
@@ -53,7 +55,7 @@ export default function AboutSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent pointer-events-none" />
 
             {/* Established in 2007 Heritage Badge */}
-            <div className="absolute top-5 left-5 z-10 rounded-[8px] sm:rounded-[12px] bg-background/95 backdrop-blur-md border border-border px-4 py-2.5 shadow-md">
+            <div className="absolute top-5 left-5 z-10 rounded-[8px] lg:rounded-[16px] bg-background/95 backdrop-blur-md border border-border px-4 py-2.5 shadow-md">
               <span className="block font-mono text-[10px] font-bold uppercase tracking-widest text-brand-orange">
                 Precision Heritage
               </span>
@@ -63,7 +65,7 @@ export default function AboutSection() {
             </div>
 
             {/* Bottom Facility Badge */}
-            <div className="absolute bottom-5 inset-x-5 z-10 rounded-[8px] sm:rounded-[12px] bg-background/95 backdrop-blur-md border border-border p-3.5 shadow-md flex items-center justify-between text-xs">
+            <div className="absolute bottom-5 inset-x-5 z-10 rounded-[8px] lg:rounded-[16px] bg-background/95 backdrop-blur-md border border-border p-3.5 shadow-md flex items-center justify-between text-xs">
               <div className="flex items-center gap-2 text-primary font-semibold">
                 <Factory className="size-4 text-brand-orange" />
                 <span>State-of-Art Technology</span>

@@ -12,10 +12,12 @@ export default function ApproachSection() {
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* Header row with Pill Badge and Title */}
-        <div className="max-w-3xl mb-14 lg:mb-18">
-          <Eyebrow text={approachData.badge} />
-          <h2 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.98] text-primary">
-            {approachData.title}
+        <div className="max-w-3xl mb-12 lg:mb-16">
+          <div className="mb-4">
+            <Eyebrow text={approachData.badge} />
+          </div>
+          <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.95] tracking-tight text-primary">
+            Engineered to Eliminate Risk.
           </h2>
           <div className="mt-5 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <p className="max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
@@ -37,7 +39,7 @@ export default function ApproachSection() {
         <div className="relative flex flex-col gap-6 lg:gap-0">
           {/* Step 1: Top Left */}
           <div className="lg:w-[52%] lg:self-start relative z-10">
-            <div className="rounded-[8px] sm:rounded-[16px] border border-brand-orange/25 bg-brand-orange/[0.06] p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-brand-orange/40">
+            <div className="rounded-[8px] lg:rounded-[16px] border border-brand-orange/25 bg-brand-orange/[0.06] p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-brand-orange/40">
               <div className="w-9 sm:w-10 rounded-2xl bg-brand-orange text-brand-orange-foreground flex items-center justify-center py-4 shrink-0 shadow-sm">
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider select-none [writing-mode:vertical-rl] rotate-180">
                   {approachData.phases[0].phase}
@@ -84,7 +86,7 @@ export default function ApproachSection() {
 
           {/* Step 2: Middle Right */}
           <div className="lg:w-[52%] lg:self-end relative z-10">
-            <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-background p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-primary/20">
+            <div className="rounded-[8px] lg:rounded-[16px] border border-border bg-background p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-primary/20">
               <div className="w-9 sm:w-10 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center py-4 shrink-0 shadow-sm">
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider select-none [writing-mode:vertical-rl] rotate-180">
                   {approachData.phases[1].phase}
@@ -131,7 +133,7 @@ export default function ApproachSection() {
 
           {/* Step 3: Middle Left */}
           <div className="lg:w-[52%] lg:self-start relative z-10">
-            <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-background p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-primary/20">
+            <div className="rounded-[8px] lg:rounded-[16px] border border-border bg-background p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-primary/20">
               <div className="w-9 sm:w-10 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center py-4 shrink-0 shadow-sm">
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider select-none [writing-mode:vertical-rl] rotate-180">
                   {approachData.phases[2].phase}
@@ -178,7 +180,7 @@ export default function ApproachSection() {
 
           {/* Step 4: Bottom Right */}
           <div className="lg:w-[52%] lg:self-end relative z-10">
-            <div className="rounded-[8px] sm:rounded-[16px] border border-brand-orange/25 bg-brand-orange/[0.06] p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-brand-orange/40">
+            <div className="rounded-[8px] lg:rounded-[16px] border border-brand-orange/25 bg-brand-orange/[0.06] p-6 sm:p-8 flex items-stretch gap-5 sm:gap-6 shadow-sm transition duration-300 hover:shadow-md hover:border-brand-orange/40">
               <div className="w-9 sm:w-10 rounded-2xl bg-brand-orange text-brand-orange-foreground flex items-center justify-center py-4 shrink-0 shadow-sm">
                 <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider select-none [writing-mode:vertical-rl] rotate-180">
                   {approachData.phases[3].phase}

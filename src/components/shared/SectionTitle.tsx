@@ -19,7 +19,7 @@ export default function SectionTitle({
       <div className="mb-4">
         <Eyebrow text={label} />
       </div>
-      <h2 className="font-display text-4xl font-semibold uppercase leading-[.95] text-primary sm:text-5xl lg:text-6xl">
+      <h2 className="font-display text-4xl font-semibold uppercase leading-[.95] text-primary sm:text-5xl lg:text-6xl tracking-tight">
         {title}
       </h2>
       {copy && (

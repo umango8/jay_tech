@@ -1,7 +1,7 @@
-import heroImage from "@/assets/cnc-hero.jpg";
-import componentsImage from "@/assets/precision-components.jpg";
-import toolingImage from "@/assets/tooling-moulds.jpg";
-import qualityImage from "@/assets/quality-inspection.jpg";
+import heroImage from "@/assets/cnc-hero.webp";
+import componentsImage from "@/assets/precision-components.webp";
+import toolingImage from "@/assets/tooling-moulds.webp";
+import qualityImage from "@/assets/quality-inspection.webp";
 
 export interface GalleryItem {
   image: any;

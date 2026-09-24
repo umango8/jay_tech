@@ -1,7 +1,6 @@
 import { ArrowDownRight, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Eyebrow from "@/components/shared/Eyebrow";
-import heroImage from "@/assets/cnc-hero.jpg";
+import heroImage from "@/assets/cnc-hero.webp";
 import { heroData } from "@/data/hero";
 
 const getImageSrc = (img: any): string =>
@@ -28,10 +27,6 @@ export default function HeroSection() {
       {/* Hero Content Container */}
       <div className="relative z-10 mx-auto flex flex-1 w-full max-w-7xl items-center px-5 py-12 sm:py-16 lg:py-20 lg:px-8">
         <div className="reveal-up max-w-3xl">
-          {/* Eyebrow Badge */}
-          <div className="mb-6">
-            <Eyebrow text={heroData.eyebrow} variant="light" />
-          </div>
 
           {/* Main Headline */}
           <h1 className="font-display text-4xl sm:text-6xl lg:text-[4.75rem] font-semibold uppercase leading-[0.92] tracking-tight text-white">

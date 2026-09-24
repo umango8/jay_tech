@@ -1,5 +1,4 @@
 import { BarChart3, Mail, MapPin, Phone, Settings, ShieldCheck } from "lucide-react";
-import Eyebrow from "@/components/shared/Eyebrow";
 import { Button } from "@/components/ui/button";
 import { footerData } from "@/data/footer";
 
@@ -18,15 +17,10 @@ export default function Footer() {
             {/* Logo */}
             <div className="mb-7">
               <img
-                src="/images/jay-tech-industries-logo-white.png"
+                src="/images/jay-tech-industries-logo-white.webp"
                 alt={footerData.companyName}
                 className="h-12 w-auto max-w-[220px] object-contain object-left sm:h-14 sm:max-w-[280px]"
               />
-            </div>
-
-            {/* Eyebrow */}
-            <div className="mb-4">
-              <Eyebrow text={footerData.eyebrow} variant="light" />
             </div>
 
             {/* Main Headline */}
@@ -69,10 +63,6 @@ export default function Footer() {
 
           {/* ── RIGHT COLUMN (Contact Info taking full width) ── */}
           <div className="lg:col-span-7 lg:border-l lg:border-white/10 lg:pl-10 xl:pl-14 flex flex-col justify-center">
-            {/* Eyebrow */}
-            <div className="mb-4">
-              <Eyebrow text={footerData.contactKicker} variant="brand" />
-            </div>
 
             {/* Company Name & Address */}
             <h3 className="font-sans text-2xl sm:text-3xl font-bold text-white mb-2 tracking-tight">
@@ -87,15 +77,24 @@ export default function Footer() {
               ))}
             </address>
 
-            {/* Phone Number */}
-            <div className="mt-6 flex items-center gap-3">
-              <Phone className="size-5 sm:size-6 text-[#FF5A00] shrink-0 stroke-[2.2]" />
-              <a
-                href={`tel:${footerData.phoneRaw}`}
-                className="font-sans text-2xl sm:text-3xl font-bold tracking-tight text-white hover:text-[#FF5A00] transition-colors"
-              >
-                {footerData.phoneDisplay}
-              </a>
+            {/* Phone Numbers */}
+            <div className="mt-6 flex items-start gap-3">
+              <Phone className="size-5 sm:size-6 text-[#FF5A00] shrink-0 stroke-[2.2] mt-1" />
+              <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-x-3.5 gap-y-1.5">
+                {footerData.phones.map((phone, idx) => (
+                  <div key={phone.raw} className="flex items-center gap-3.5">
+                    <a
+                      href={`tel:${phone.raw}`}
+                      className="font-sans text-xl sm:text-2xl font-bold tracking-tight text-white hover:text-[#FF5A00] transition-colors whitespace-nowrap"
+                    >
+                      {phone.display}
+                    </a>
+                    {idx < footerData.phones.length - 1 && (
+                      <span className="hidden sm:inline text-white/30 text-lg">/</span>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* 3 Action Buttons */}

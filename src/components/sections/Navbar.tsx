@@ -66,7 +66,7 @@ export default function Navbar() {
             </a>
           ))}
           <Button asChild variant="orange" className="mt-4 w-full">
-            <a href="#quote" onClick={() => setMenuOpen(false)}>
+            <a href="/#quote" onClick={() => setMenuOpen(false)}>
               Request a Quote
             </a>
           </Button>

@@ -33,16 +33,15 @@ export default function CapabilitiesSection() {
 
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         {/* Header Row */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14 lg:mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12 lg:mb-16">
           <div>
             <div className="mb-4">
               <Eyebrow text={capabilitiesData.eyebrow} />
             </div>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.92] text-primary tracking-tight">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.95] tracking-tight text-primary">
               {capabilitiesData.titlePre}
-              <br />
-              {capabilitiesData.titlePost.slice(0, -1)}
-              <span className="text-brand-orange">.</span>
+              <br className="hidden sm:inline" />
+              {capabilitiesData.titlePost}
             </h2>
           </div>
 
@@ -66,7 +65,7 @@ export default function CapabilitiesSection() {
           {capabilitiesData.items.map((item) => (
             <div
               key={item.title}
-              className="group relative rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/60 p-4 sm:p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-secondary/90 hover:border-brand-orange/40 hover:-translate-y-0.5 flex flex-col justify-between"
+              className="group relative rounded-[8px] lg:rounded-[16px] border border-border bg-secondary/60 p-4 sm:p-5 shadow-sm transition-all duration-300 hover:shadow-md hover:bg-secondary/90 hover:border-brand-orange/40 hover:-translate-y-0.5 flex flex-col justify-between"
             >
               {/* Category Pill Tag */}
               <div className="flex items-center">

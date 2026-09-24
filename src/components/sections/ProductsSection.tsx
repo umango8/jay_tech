@@ -25,7 +25,7 @@ export default function ProductsSection() {
       className="border-b border-border bg-secondary/60 py-[76px] overflow-hidden"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="mb-12 lg:mb-14">
+        <div className="mb-12 lg:mb-16">
           <SectionTitle
             label="Our Products"
             title="Built for the work that matters."
@@ -72,7 +72,7 @@ export default function ProductsSection() {
                   key={item.name}
                   className="pl-5 basis-full sm:basis-1/2 lg:basis-1/3"
                 >
-                  <article className="group relative h-[480px] sm:h-[500px] overflow-hidden rounded-[8px] sm:rounded-[16px] bg-primary shadow-sm border border-border flex flex-col justify-end p-7 transition-all duration-500 hover:shadow-xl">
+                  <article className="group relative h-[480px] sm:h-[500px] overflow-hidden rounded-[8px] lg:rounded-[16px] bg-primary shadow-sm border border-border flex flex-col justify-end p-7 transition-all duration-500 hover:shadow-xl">
                     <img
                       src={getImageSrc(item.image)}
                       alt={item.name}

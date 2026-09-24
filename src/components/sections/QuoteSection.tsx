@@ -39,7 +39,7 @@ export default function QuoteSection() {
                 type={type}
                 required={required}
                 maxLength={maxLength}
-                className="h-12 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20"
+                className="h-12 rounded-[8px] lg:rounded-[16px] border border-input bg-background px-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20"
               />
             </label>
           ))}
@@ -49,7 +49,7 @@ export default function QuoteSection() {
             <input
               type="file"
               accept={quoteData.acceptedFiles}
-              className="h-12 rounded-[8px] sm:rounded-[12px] border border-dashed border-input bg-secondary p-2 text-xs font-normal normal-case file:mr-3 file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-primary-foreground file:rounded-md"
+              className="h-12 rounded-[8px] lg:rounded-[16px] border border-dashed border-input bg-secondary p-2 text-xs font-normal normal-case file:mr-3 file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-primary-foreground file:rounded-md"
             />
           </label>
 
@@ -58,7 +58,7 @@ export default function QuoteSection() {
             <textarea
               maxLength={1500}
               rows={5}
-              className="resize-none rounded-[8px] sm:rounded-[16px] border border-input bg-background p-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20"
+              className="resize-none rounded-[8px] lg:rounded-[16px] border border-input bg-background p-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20"
             />
           </label>
 

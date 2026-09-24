@@ -14,11 +14,11 @@ import {
   Timer,
   Factory,
   Check,
-  Send,
   Download,
 } from "lucide-react";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
+import QuoteSection from "@/components/sections/QuoteSection";
 import Eyebrow from "@/components/shared/Eyebrow";
 import { Button } from "@/components/ui/button";
 import {
@@ -155,7 +155,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
                 {/* Quick Spec Highlights Grid */}
                 <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-                  <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
+                  <div className="rounded-[8px] lg:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
                     <div className="flex items-center gap-2 text-brand-orange mb-1.5">
                       <Ruler className="size-4" />
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">
@@ -167,7 +167,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     </div>
                   </div>
 
-                  <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
+                  <div className="rounded-[8px] lg:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
                     <div className="flex items-center gap-2 text-brand-orange mb-1.5">
                       <Layers className="size-4" />
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">
@@ -179,7 +179,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     </div>
                   </div>
 
-                  <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
+                  <div className="rounded-[8px] lg:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
                     <div className="flex items-center gap-2 text-brand-orange mb-1.5">
                       <ShieldCheck className="size-4" />
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">
@@ -191,7 +191,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     </div>
                   </div>
 
-                  <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
+                  <div className="rounded-[8px] lg:rounded-[16px] border border-border bg-secondary/50 p-4 transition-all hover:border-brand-orange/40 hover:bg-secondary/80">
                     <div className="flex items-center gap-2 text-brand-orange mb-1.5">
                       <Timer className="size-4" />
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-muted-foreground">
@@ -207,7 +207,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 {/* Primary Action Row */}
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <Button asChild size="lg" variant="orange">
-                    <a href="#inquire" className="flex items-center gap-2 font-bold">
+                    <a href="#quote" className="flex items-center gap-2 font-bold">
                       Request Quotation for {product.name}
                       <ArrowRight className="size-4" />
                     </a>
@@ -227,7 +227,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
               {/* Right Column: Visual Product Showcase */}
               <div className="lg:col-span-5">
-                <div className="relative group overflow-hidden rounded-[8px] sm:rounded-[16px] border border-border bg-primary/95 shadow-xl">
+                <div className="relative group overflow-hidden rounded-[8px] lg:rounded-[16px] border border-border bg-primary/95 shadow-xl">
                   {/* Aspect Ratio Frame */}
                   <div className="relative h-[360px] sm:h-[460px] w-full overflow-hidden bg-slate-900">
                     <img
@@ -247,7 +247,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                     </div>
 
                     {/* Bottom Metadata Overlay */}
-                    <div className="absolute bottom-4 inset-x-4 p-4 rounded-[8px] sm:rounded-[12px] bg-background/90 backdrop-blur-md border border-border/80 text-foreground">
+                    <div className="absolute bottom-4 inset-x-4 p-4 rounded-[8px] lg:rounded-[16px] bg-background/90 backdrop-blur-md border border-border/80 text-foreground">
                       <div className="flex items-center justify-between text-xs font-mono">
                         <span className="text-muted-foreground">INSPECTION METHOD</span>
                         <span className="font-bold text-primary">{product.inspection}</span>
@@ -261,7 +261,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 </div>
 
                 {/* Sub-Card Plant Guarantee */}
-                <div className="mt-4 rounded-[8px] sm:rounded-[16px] border border-border bg-secondary/50 p-4 flex items-center justify-between text-xs">
+                <div className="mt-4 rounded-[8px] lg:rounded-[16px] border border-border bg-secondary/50 p-4 flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2.5 text-muted-foreground">
                     <Factory className="size-4 text-brand-orange" />
                     <span>Engineered at Odhav GIDC, Ahmedabad Plant • Est. 2007</span>
@@ -287,7 +287,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
 
             {/* Spec Table Card */}
-            <div className="overflow-hidden rounded-[8px] sm:rounded-[16px] border border-border bg-background shadow-xs">
+            <div className="overflow-hidden rounded-[8px] lg:rounded-[16px] border border-border bg-background shadow-xs">
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm" role="table">
                   <thead className="border-b border-border bg-secondary/70 text-xs font-bold uppercase tracking-wider text-primary">
@@ -333,7 +333,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   <span>Custom engineering drawings (STEP, IGES, DXF, DWG) accepted for quotation.</span>
                 </div>
                 <a
-                  href="#inquire"
+                  href="#quote"
                   className="font-bold text-brand-orange hover:underline inline-flex items-center gap-1"
                 >
                   Upload 3D CAD Data <ArrowRight className="size-3" />
@@ -360,7 +360,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               {product.keyFeatures.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="rounded-[8px] sm:rounded-[16px] border border-border bg-card p-6 shadow-xs transition-all hover:border-brand-orange/40 hover:shadow-md"
+                  className="rounded-[8px] lg:rounded-[16px] border border-border bg-card p-6 shadow-xs transition-all hover:border-brand-orange/40 hover:shadow-md"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-orange/10 text-brand-orange font-display font-bold text-sm">
@@ -412,7 +412,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   {product.applications.map((app, idx) => (
                     <div
                       key={idx}
-                      className="rounded-[8px] sm:rounded-[16px] border border-border bg-background p-5 flex items-center gap-3.5 transition-all hover:border-brand-orange/30"
+                      className="rounded-[8px] lg:rounded-[16px] border border-border bg-background p-5 flex items-center gap-3.5 transition-all hover:border-brand-orange/30"
                     >
                       <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-secondary text-brand-orange">
                         <Check className="size-4" />
@@ -428,193 +428,25 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
 
-        {/* Direct RFQ / Inquiry Section */}
-        <section id="inquire" className="py-16 lg:py-24 border-b border-border scroll-mt-24">
-          <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <div className="rounded-[8px] sm:rounded-[16px] border border-border bg-card p-6 sm:p-10 lg:p-12 shadow-md">
-              <div className="grid gap-10 lg:grid-cols-12">
-                {/* Form Info Side */}
-                <div className="lg:col-span-5 flex flex-col justify-between">
-                  <div>
-                    <Eyebrow text="REQUEST FOR QUOTATION (RFQ)" />
-                    <h2 className="mt-3 font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-primary">
-                      Order or Inquire for {product.name}
-                    </h2>
-                    <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                      Submit your 2D/3D part drawings or tooling specs. Our engineering team reviews cavity requirements, cooling systems, and cycle goals to deliver a formal proposal within 24 hours.
-                    </p>
-
-                    <div className="mt-8 space-y-4 text-xs font-medium text-foreground">
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-brand-orange">
-                          <CheckCircle2 className="size-4" />
-                        </div>
-                        <span>Fast Turnaround: Quotes delivered within 24 hours</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-brand-orange">
-                          <FileCheck2 className="size-4" />
-                        </div>
-                        <span>NDA Protected: Complete CAD confidentiality guaranteed</span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary text-brand-orange">
-                          <Phone className="size-4" />
-                        </div>
-                        <span>Direct Engineering Line: +91 97243 24427</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-border">
-                    <p className="text-xs text-muted-foreground">
-                      Factory: {companyConfig.address}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Actual Inquiry Form */}
-                <div className="lg:col-span-7">
-                  <form
-                    action="https://formsubmit.co/info@jaytechindustries.com"
-                    method="POST"
-                    className="grid gap-4 sm:grid-cols-2"
-                  >
-                    {/* Hidden Product Context */}
-                    <input
-                      type="hidden"
-                      name="_subject"
-                      value={`Product RFQ: ${product.name} (Die #${product.number})`}
-                    />
-                    <input
-                      type="hidden"
-                      name="Product_Category"
-                      value={product.category}
-                    />
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary">
-                      Full Name *
-                      <input
-                        type="text"
-                        name="name"
-                        required
-                        placeholder="e.g. Rajesh Patel"
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-3.5 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary">
-                      Company Name *
-                      <input
-                        type="text"
-                        name="company"
-                        required
-                        placeholder="e.g. Precision Auto Components Ltd."
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-3.5 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary">
-                      Work Email *
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        placeholder="name@company.com"
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-3.5 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary">
-                      Phone / Mobile *
-                      <input
-                        type="tel"
-                        name="phone"
-                        required
-                        placeholder="+91 98765 43210"
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-3.5 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary">
-                      Target Quantity / Volume
-                      <input
-                        type="text"
-                        name="volume"
-                        placeholder="e.g. 1 Prototype Die / 100k Shots/yr"
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-3.5 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary">
-                      Required Lead Time
-                      <input
-                        type="text"
-                        name="lead_time"
-                        defaultValue={product.leadTime}
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-input bg-background px-3.5 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary sm:col-span-2">
-                      Upload CAD / Drawing (STEP, PDF, DWG, ZIP)
-                      <input
-                        type="file"
-                        name="drawing"
-                        accept=".step,.stp,.iges,.igs,.dxf,.dwg,.pdf,.zip"
-                        className="h-11 rounded-[8px] sm:rounded-[12px] border border-dashed border-input bg-secondary/50 p-2 text-xs font-normal normal-case file:mr-3 file:border-0 file:bg-primary file:px-3 file:py-1 file:text-primary-foreground file:rounded-md file:text-xs"
-                      />
-                    </label>
-
-                    <label className="grid gap-1.5 text-xs font-bold uppercase text-primary sm:col-span-2">
-                      Project Notes / Technical Requirements
-                      <textarea
-                        name="notes"
-                        rows={4}
-                        defaultValue={`Inquiring regarding ${product.name} (Die #${product.number}). Target tolerance: ${product.tolerances}.`}
-                        className="resize-none rounded-[8px] sm:rounded-[16px] border border-input bg-background p-3 text-sm font-normal normal-case outline-none transition focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20"
-                      />
-                    </label>
-
-                    <div className="sm:col-span-2 flex flex-wrap items-center justify-between gap-4 pt-2">
-                      <Button type="submit" size="lg" variant="orange" className="font-bold">
-                        <Send className="size-4" /> Send Request For Quotation
-                      </Button>
-                      <span className="text-xs text-muted-foreground font-mono">
-                        Direct Email: info@jaytechindustries.com
-                      </span>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Landing Contact / Quote Form */}
+        <QuoteSection />
 
         {/* Related Products Showcase */}
         {relatedProducts.length > 0 && (
           <section className="py-14 lg:py-20 bg-secondary/30">
             <div className="mx-auto max-w-7xl px-5 lg:px-8">
-              <div className="flex flex-wrap items-end justify-between gap-4 mb-8">
-                <div>
-                  <Eyebrow text="EXPLORE OTHER CAPABILITIES" />
-                  <h2 className="mt-2 font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-primary">
-                    Related Tooling & Machining Dies
-                  </h2>
-                </div>
-                <Link
-                  href="/#products"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-brand-orange hover:underline"
-                >
-                  View All 10 Products <ArrowRight className="size-3.5" />
-                </Link>
+              <div className="mb-8">
+                <Eyebrow text="EXPLORE OTHER CAPABILITIES" />
+                <h2 className="mt-2 font-display text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-primary">
+                  Related Tooling & Machining Dies
+                </h2>
               </div>
 
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedProducts.map((rel) => (
                   <article
                     key={rel.slug}
-                    className="group relative h-[380px] overflow-hidden rounded-[8px] sm:rounded-[16px] bg-primary border border-border shadow-sm flex flex-col justify-end p-6 transition-all duration-300 hover:shadow-xl"
+                    className="group relative h-[380px] overflow-hidden rounded-[8px] lg:rounded-[16px] bg-primary border border-border shadow-sm flex flex-col justify-end p-6 transition-all duration-300 hover:shadow-xl"
                   >
                     <img
                       src={getImageSrc(rel.image)}

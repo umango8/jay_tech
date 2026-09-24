@@ -15,9 +15,9 @@ export default function QualitySection() {
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14 xl:gap-16">
           {/* Left Column: Inspection Photo with Overlays */}
           <div className="relative lg:col-span-6">
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[8px] sm:rounded-[16px] border border-border/60 shadow-2xl lg:aspect-[1.12/1]">
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[8px] lg:rounded-[16px] border border-border/60 shadow-2xl lg:aspect-[1.12/1]">
               <img
-                src="\images\qualtity_image.png"
+                src="/images/qualtity_image.webp"
                 alt="Precision component quality inspection with digital caliper"
                 loading="lazy"
                 width={1408}
@@ -61,11 +61,10 @@ export default function QualitySection() {
               <Eyebrow text={qualityData.kicker} />
             </div>
 
-            {/* Main Headline */}
-            <h2 className="font-display text-3xl font-extrabold uppercase tracking-tight text-foreground sm:text-4xl lg:text-[46px] xl:text-[50px] lg:leading-[1.08]">
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.95] tracking-tight text-primary">
               {qualityData.headlinePre}
-              <br />
-              <span className="text-brand-orange">{qualityData.headlineHighlight}</span>
+              <br className="hidden sm:inline" />
+              {qualityData.headlineHighlight}
             </h2>
 
             {/* Subtitle */}
@@ -80,7 +79,7 @@ export default function QualitySection() {
                 return (
                   <div
                     key={point.title}
-                    className="group flex items-start gap-4 rounded-[8px] sm:rounded-[16px] border border-transparent p-2 transition-colors hover:border-border/40 hover:bg-muted/30 sm:items-center sm:gap-5"
+                    className="group flex items-start gap-4 rounded-[8px] lg:rounded-[16px] border border-transparent p-2 transition-colors hover:border-border/40 hover:bg-muted/30 sm:items-center sm:gap-5"
                   >
                     <div className="flex size-13 shrink-0 items-center justify-center rounded-2xl border border-brand-orange/25 bg-brand-orange/10 text-brand-orange shadow-sm transition-all group-hover:scale-105 group-hover:border-brand-orange/40 group-hover:bg-brand-orange/15 sm:size-14">
                       <Icon className="size-6 stroke-[1.8]" />

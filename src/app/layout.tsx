@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Manrope, Barlow_Condensed } from "next/font/google";
+import WhatsAppButton from "@/components/shared/WhatsAppButton";
 import "../styles.css";
 
 const manrope = Manrope({
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   description: "Precision machining, CNC components, dies, moulds, jigs, fixtures and engineering solutions from Odhav, Ahmedabad.",
   authors: [{ name: "Jay Tech Industries" }],
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.webp",
   },
   openGraph: {
     title: "Jay Tech Industries | Precision Engineering",
@@ -49,6 +50,7 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} ${barlowCondensed.variable}`}>
       <body className="antialiased">
         {children}
+        <WhatsAppButton />
       </body>
     </html>
   );

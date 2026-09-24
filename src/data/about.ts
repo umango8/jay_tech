@@ -6,7 +6,7 @@ export interface AboutStat {
 }
 
 export const aboutData = {
-  eyebrow: "JAY TECH INDUSTRIES (JTI) // EST. 2007",
+  eyebrow: "About Us",
   headline: "Technology Oriented Company Promoted by Technocrats",
   establishedYear: "2007",
   establishedText: "Established in 2007",

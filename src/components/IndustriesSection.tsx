@@ -1,6 +1,5 @@
 "use client";
 
-import { ChevronRight } from "lucide-react";
 import Eyebrow from "@/components/shared/Eyebrow";
 
 interface IndustryItem {
@@ -174,7 +173,7 @@ export default function IndustriesSection() {
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         {/* Deep Industrial Navy Card matching reference screenshot */}
-        <div className="relative overflow-hidden rounded-[8px] sm:rounded-[16px] bg-[#0c3c6d] p-8 sm:p-12 lg:p-16 text-white shadow-2xl">
+        <div className="relative overflow-hidden rounded-[8px] lg:rounded-[16px] bg-[#0c3c6d] p-8 sm:p-12 lg:p-16 text-white shadow-2xl">
           {/* Subtle blueprint grid overlay */}
           <div className="blueprint-grid absolute inset-0 opacity-15 pointer-events-none invert" />
 
@@ -188,9 +187,9 @@ export default function IndustriesSection() {
               <Eyebrow text="SECTORS & DOMAINS" variant="light" />
             </div>
 
-            {/* Main Headline */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold uppercase tracking-tight text-white">
-              Industries We Serve
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold uppercase leading-[.95] tracking-tight">
+              <span className="text-white">Industries </span>
+              <span className="text-brand-orange">We Serve.</span>
             </h2>
 
             {/* Decorative Divider */}
@@ -221,11 +220,6 @@ export default function IndustriesSection() {
                   <h3 className="mt-4 font-display text-base sm:text-lg font-semibold uppercase tracking-wide text-white group-hover:text-brand-orange transition-colors">
                     {item.title}
                   </h3>
-
-                  {/* Chevron Button */}
-                  <div className="mt-4 flex size-7 sm:size-8 items-center justify-center rounded-none border border-white/40 text-white/80 transition-all duration-300 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white group-hover:scale-110">
-                    <ChevronRight className="size-3.5 sm:size-4" />
-                  </div>
                 </a>
               ))}
             </div>

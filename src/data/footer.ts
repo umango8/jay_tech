@@ -3,6 +3,11 @@ export interface FooterFeature {
   titleBottom: string;
 }
 
+export interface FooterPhone {
+  display: string;
+  raw: string;
+}
+
 export const footerData = {
   eyebrow: "ESTABLISHED IN 2007 // BUILT FOR A STRONGER TOMORROW",
   headlinePre: "PARTNER FOR",
@@ -21,9 +26,15 @@ export const footerData = {
     "Opp. GVMM, Odhav,",
     "Ahmedabad, Gujarat – 382418, India",
   ],
-  phoneDisplay: "+91 97243 24427 / +91 99742 96091",
+  phoneDisplay: "+91 97243 24427 / +91 99742 96091 / +91 97243 24426",
   phoneRaw: "+919724324427",
   phoneSecondaryRaw: "+919974296091",
+  phoneTertiaryRaw: "+919724324426",
+  phones: [
+    { display: "+91 97243 24427", raw: "+919724324427" },
+    { display: "+91 99742 96091", raw: "+919974296091" },
+    { display: "+91 97243 24426", raw: "+919724324426" },
+  ] as FooterPhone[],
   email: "info@jaytechindustries.com",
   googleMapsUrl: "https://maps.google.com/?q=A-54%2F1+Bileshwar+Industrial+Estate+Odhav+Ahmedabad",
   locationTagline: "Precision engineering · Odhav, Ahmedabad · Est. 2007",
