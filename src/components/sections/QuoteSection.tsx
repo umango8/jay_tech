@@ -1,19 +1,47 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowRight, Check, FileUp } from "lucide-react";
+import { ArrowRight, Check, FileUp, Loader2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionTitle from "@/components/shared/SectionTitle";
 import { quoteData } from "@/data/quote";
 
 export default function QuoteSection() {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (event.currentTarget.checkValidity()) {
+    const form = event.currentTarget;
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    setLoading(true);
+    setError(null);
+    setSent(false);
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to submit enquiry. Please try again.");
+      }
+
       setSent(true);
-      event.currentTarget.reset();
+      form.reset();
+    } catch (err: any) {
+      setError(err?.message || "An error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -32,14 +60,16 @@ export default function QuoteSection() {
         </div>
 
         <form onSubmit={handleSubmit} className="grid gap-5 sm:grid-cols-2" aria-label="Quote request form">
-          {quoteData.fields.map(({ label, type, required, maxLength }) => (
+          {quoteData.fields.map(({ label, name, placeholder, type, required, maxLength }) => (
             <label key={label} className="grid gap-2 text-xs font-bold uppercase text-primary">
               {label}
               <input
                 type={type}
+                name={name || label.toLowerCase()}
+                placeholder={placeholder}
                 required={required}
                 maxLength={maxLength}
-                className="h-12 rounded-[8px] lg:rounded-[16px] border border-input bg-background px-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20"
+                className="h-12 rounded-[8px] lg:rounded-[16px] border border-input bg-background px-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20 placeholder:text-muted-foreground/50"
               />
             </label>
           ))}
@@ -48,6 +78,7 @@ export default function QuoteSection() {
             Upload Drawing/File
             <input
               type="file"
+              name="file"
               accept={quoteData.acceptedFiles}
               className="h-12 rounded-[8px] lg:rounded-[16px] border border-dashed border-input bg-secondary p-2 text-xs font-normal normal-case file:mr-3 file:border-0 file:bg-primary file:px-3 file:py-1.5 file:text-primary-foreground file:rounded-md"
             />
@@ -56,19 +87,34 @@ export default function QuoteSection() {
           <label className="grid gap-2 text-xs font-bold uppercase text-primary sm:col-span-2">
             Message
             <textarea
+              name="message"
+              placeholder={quoteData.messagePlaceholder}
               maxLength={1500}
               rows={5}
-              className="resize-none rounded-[8px] lg:rounded-[16px] border border-input bg-background p-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20"
+              className="resize-none rounded-[8px] lg:rounded-[16px] border border-input bg-background p-4 text-sm font-normal normal-case outline-none transition focus:border-primary focus:ring-2 focus:ring-ring/20 placeholder:text-muted-foreground/50"
             />
           </label>
 
           <div className="flex flex-wrap items-center gap-4 sm:col-span-2">
-            <Button type="submit" size="lg" variant="orange">
-              Send Enquiry <ArrowRight />
+            <Button type="submit" size="lg" variant="orange" disabled={loading}>
+              {loading ? (
+                <>
+                  <Loader2 className="size-4 animate-spin mr-2" /> Sending...
+                </>
+              ) : (
+                <>
+                  Send Enquiry <ArrowRight />
+                </>
+              )}
             </Button>
             {sent && (
               <p role="status" className="flex items-center gap-2 text-sm font-semibold text-primary">
-                <Check className="size-4 text-brand-orange" /> Thank you. Your enquiry has been prepared.
+                <Check className="size-4 text-brand-orange" /> Thank you. Your enquiry has been received and confirmed via email.
+              </p>
+            )}
+            {error && (
+              <p role="alert" className="flex items-center gap-2 text-sm font-semibold text-destructive">
+                <AlertCircle className="size-4 text-destructive" /> {error}
               </p>
             )}
           </div>
@@ -77,3 +123,4 @@ export default function QuoteSection() {
     </section>
   );
 }
+
