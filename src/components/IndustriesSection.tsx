@@ -111,7 +111,7 @@ const industries: IndustryItem[] = [
     ),
   },
   {
-    title: "Motorsport",
+    title: "Automobile",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -123,13 +123,19 @@ const industries: IndustryItem[] = [
         className="size-12 sm:size-14 text-white group-hover:text-brand-orange transition-colors"
         aria-hidden="true"
       >
-        <circle cx="32" cy="32" r="24" />
-        <circle cx="32" cy="32" r="8" />
-        <path d="M8 32 L24 32" />
-        <path d="M40 32 L56 32" />
-        <path d="M32 40 L32 56" />
-        <path d="M20 18 L27 26" />
-        <path d="M44 18 L37 26" />
+        {/* Car Cabin & Roof Silhouette */}
+        <path d="M12 36 L17 24 C18.5 20 22 18 26 18 L38 18 C42 18 45.5 20 47 24 L52 36" />
+        {/* Front & Rear Body */}
+        <path d="M10 36 L54 36 C57 36 59 38 59 41 L59 46 C59 48 57 50 55 50 L53 50" />
+        <path d="M11 50 L9 50 C7 50 5 48 5 46 L5 41 C5 38 7 36 10 36" />
+        {/* Window Separation Pillar */}
+        <path d="M19 25 L45 25" />
+        <line x1="32" y1="18" x2="32" y2="25" />
+        {/* Wheels */}
+        <circle cx="18" cy="48" r="5" />
+        <circle cx="46" cy="48" r="5" />
+        <circle cx="18" cy="48" r="2" fill="currentColor" />
+        <circle cx="46" cy="48" r="2" fill="currentColor" />
       </svg>
     ),
   },
@@ -198,7 +204,7 @@ export default function IndustriesSection() {
             {/* Sub-paragraph matching user reference text */}
             <p className="mx-auto max-w-3xl text-sm sm:text-base leading-relaxed text-slate-200">
               At Jay Tech Industries, we manufacture highly precision-led components for a vast range of
-              industries from aviation and space to defence, plastic moulding, motorsport as well as
+              industries from aviation and space to defence, plastic moulding, automobile as well as
               general engineering industries. As per their unique requirements, we provide a solution
               that is best suited to their industry.
             </p>

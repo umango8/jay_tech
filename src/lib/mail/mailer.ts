@@ -8,13 +8,42 @@ import { renderClientQuoteEmail } from "./templates/clientQuoteEmail";
 function getTransporter() {
   const user = process.env.EMAIL_USER;
   const pass = process.env.EMAIL_PASS;
+  const host = process.env.EMAIL_HOST;
+  const port = process.env.EMAIL_PORT;
 
   if (!user || !pass) {
     return null;
   }
 
+  // If custom SMTP host is specified (e.g. Hostinger, cPanel, etc.)
+  if (host) {
+    return nodemailer.createTransport({
+      host,
+      port: port ? parseInt(port, 10) : 465,
+      secure: process.env.EMAIL_SECURE !== "false",
+      auth: {
+        user,
+        pass,
+      },
+    });
+  }
+
+  // Default to gmail service if no host provided and using gmail address
+  if (user.endsWith("@gmail.com")) {
+    return nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user,
+        pass,
+      },
+    });
+  }
+
+  // Fallback for jaytechindustries.in or standard SMTP
   return nodemailer.createTransport({
-    service: "gmail",
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true,
     auth: {
       user,
       pass,
