@@ -56,6 +56,21 @@ export async function generateMetadata({
       title: `${product.name} - Jay Tech Industries`,
       description: product.desc,
       type: "website",
+      siteName: "Jay Tech Industries",
+      images: [
+        {
+          url: product.image,
+          width: 1200,
+          height: 630,
+          alt: product.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${product.name} - Jay Tech Industries`,
+      description: product.desc,
+      images: [product.image],
     },
   };
 }

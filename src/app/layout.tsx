@@ -18,21 +18,34 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jaytechindustries.in"),
   title: "Jay Tech Industries | Precision Engineering Ahmedabad",
   description: "Precision machining, CNC components, dies, moulds, jigs, fixtures and engineering solutions from Odhav, Ahmedabad.",
   authors: [{ name: "Jay Tech Industries" }],
   icons: {
     icon: "/favicon.webp",
+    shortcut: "/favicon.webp",
+    apple: "/favicon.webp",
   },
   openGraph: {
     title: "Jay Tech Industries | Precision Engineering",
     description: "Precision machining, tools, dies, moulds, fixtures and engineering solutions from Ahmedabad.",
     type: "website",
+    siteName: "Jay Tech Industries",
+    images: [
+      {
+        url: "/images/jay-tech-industries-logo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Jay Tech Industries - Precision Engineering",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Jay Tech Industries | Precision Engineering",
     description: "Precision machining, tools, dies, moulds, fixtures and engineering solutions from Ahmedabad.",
+    images: ["/images/jay-tech-industries-logo.webp"],
   },
 };
 
