@@ -72,7 +72,7 @@ export default function ProductsSection() {
                   key={item.name}
                   className="pl-5 basis-full sm:basis-1/2 lg:basis-1/3"
                 >
-                  <article className="group relative h-[480px] sm:h-[500px] overflow-hidden rounded-[8px] lg:rounded-[16px] bg-primary shadow-sm border border-border flex flex-col justify-end p-7 transition-all duration-500 hover:shadow-xl">
+                  <article className="group relative h-[480px] sm:h-[500px] overflow-hidden rounded-[8px] lg:rounded-[16px] bg-black shadow-sm border border-border flex flex-col justify-end p-7 transition-all duration-500 hover:shadow-xl">
                     <img
                       src={getImageSrc(item.image)}
                       alt={item.name}
@@ -81,7 +81,7 @@ export default function ProductsSection() {
                       height={1008}
                       className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent transition-opacity group-hover:via-primary/50" />
+                    <div className="absolute bottom-0 inset-x-0 h-[60%] bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
                     <span className="absolute right-6 top-6 font-display text-2xl font-bold text-primary-foreground/75 bg-background/20 backdrop-blur-md px-3.5 py-1 rounded-xl border border-white/10">
                       {item.number}
                     </span>

@@ -227,15 +227,15 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
               {/* Right Column: Visual Product Showcase */}
               <div className="lg:col-span-5">
-                <div className="relative group overflow-hidden rounded-[8px] lg:rounded-[16px] border border-border bg-primary/95 shadow-xl">
+                <div className="relative group overflow-hidden rounded-[8px] lg:rounded-[16px] border border-border bg-black shadow-xl">
                   {/* Aspect Ratio Frame */}
-                  <div className="relative h-[360px] sm:h-[460px] w-full overflow-hidden bg-slate-900">
+                  <div className="relative h-[360px] sm:h-[460px] w-full overflow-hidden bg-black">
                     <img
                       src={getImageSrc(product.image)}
                       alt={product.name}
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105 opacity-90"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
 
                     {/* Corner Engineering Crosshairs */}
                     <div className="absolute top-4 left-4 font-mono text-[10px] text-white/70 bg-black/40 backdrop-blur-md px-2.5 py-1 rounded-md border border-white/10">
@@ -446,14 +446,14 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 {relatedProducts.map((rel) => (
                   <article
                     key={rel.slug}
-                    className="group relative h-[380px] overflow-hidden rounded-[8px] lg:rounded-[16px] bg-primary border border-border shadow-sm flex flex-col justify-end p-6 transition-all duration-300 hover:shadow-xl"
+                    className="group relative h-[380px] overflow-hidden rounded-[8px] lg:rounded-[16px] bg-black border border-border shadow-sm flex flex-col justify-end p-6 transition-all duration-300 hover:shadow-xl"
                   >
                     <img
                       src={getImageSrc(rel.image)}
                       alt={rel.name}
                       className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-80"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/60 to-transparent" />
+                    <div className="absolute bottom-0 inset-x-0 h-[62%] bg-gradient-to-t from-black via-black/70 to-transparent pointer-events-none" />
 
                     <div className="relative z-10 text-primary-foreground">
                       <span className="inline-block mb-1.5 rounded-md bg-brand-orange px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white">

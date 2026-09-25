@@ -282,44 +282,44 @@ export const productsData: ProductItem[] = [
     ],
   },
   {
-    slug: "jig-fixtures-manufacturing",
-    name: "Jig & Fixtures Manufacturing",
-    desc: "Custom assembly, welding, and inspection fixtures engineered for fail-safe component orientation, repeatability, and ergonomic operator workflow.",
+    slug: "industrial-parts",
+    name: "Industrial Parts",
+    desc: "Custom manufactured precision industrial parts, replacement tooling components, and heavy-duty mechanical hardware engineered for endurance and high-load performance.",
     overview:
-      "We design and build bespoke industrial jigs and fixtures that optimize manufacturing throughput and eliminate human assembly error. Our tooling includes pneumatic clamping fixtures, robotic welding jigs, CMM checking fixtures, and hydraulic holding nests engineered from hardened alloy steels with modular wear pads.",
-    image: "/images/products/jig-fixtures-manufacturing.webp",
-    thumb: "/images/products/jig-fixtures-manufacturing.webp",
+      "Jay Tech Industries manufactures bespoke, high-tolerance industrial parts and mechanical components engineered for demanding plant machinery, assembly systems, and hydraulic equipment. Fabricated from alloy steels, brass, stainless steel, and wear-resistant bronzes, our industrial components undergo rigorous heat treatment, precision CNC finishing, and 100% metrological inspection to guarantee maximum durability and zero downtime.",
+    image: "/images/products/industrial-parts.webp",
+    thumb: "/images/products/industrial-parts.webp",
     number: "07",
-    category: "Tooling & Fixtures",
-    tolerances: "±0.008 mm",
-    materials: "Mild Steel C45, OHNS, Aluminium 6061, Hard Bronze",
-    hardness: "Case Hardened Pins & Pads (55 – 60 HRC)",
-    surfaceFinish: "Black Oxide / Electroless Nickel Plating",
-    maxDimensions: "Up to 1800 × 1200 × 900 mm",
-    inspection: "Complete CMM Coordinate Verification & Calibration",
-    leadTime: "2 – 4 Weeks",
-    price: "Engineered on Requirement",
-    usage: "Workpiece locating, clamping, and inspection for automated assembly lines.",
+    category: "Industrial Components",
+    tolerances: "±0.005 mm",
+    materials: "EN19, EN24, SS304/316, Mild Steel, Brass, Bronze, Delrin",
+    hardness: "45 – 55 HRC (Induction / Through Hardened)",
+    surfaceFinish: "Black Oxide / Zinc Plating / Hard Chrome / Ground Finish",
+    maxDimensions: "Up to 1500 × 800 × 600 mm",
+    inspection: "100% CMM & Coordinate Measurement",
+    leadTime: "1 – 3 Weeks",
+    price: "Get Best Quote",
+    usage: "Heavy machinery, industrial plant maintenance, and custom OEM mechanical assemblies.",
     keyFeatures: [
-      "Poka-Yoke (mistake-proofing) physical locating pins preventing misloaded parts",
-      "Pneumatic and hydraulic automated toggle clamps with sensor feedback",
-      "Hardened, interchangeable wear pads and rest buttons for extended field life",
-      "Ergonomic counterbalanced frames designed for operator safety and reduced cycle fatigue",
+      "Engineered for high mechanical wear resistance, fatigue endurance, and long lifecycle",
+      "Precision CNC turned and milled geometries ensuring exact drop-in fitment",
+      "Anti-corrosion surface treatments for harsh industrial operating environments",
+      "Full material test certificate (MTC) and dimensional inspection traceability",
     ],
     applications: [
-      "Automotive Robotic Welding & Spot-Welding Fixtures",
-      "CNC Machining Multi-Part Hydraulic Clamping Tombstones",
-      "Final Quality Inspection & Dial Gauge Checking Jigs",
-      "Precision Sub-Assembly Press & Riveting Stations",
+      "Heavy Industrial Plant Machinery & Conveyor Drives",
+      "Hydraulic & Pneumatic Cylinder Mounting Brackets",
+      "Power Transmission Couplings, Flanges & Guide Bushings",
+      "Automated Manufacturing Line Spare & Wear Parts",
     ],
     technicalSpecs: [
-      { label: "Fixture Type", value: "Welding, Machining, Assembly & Inspection Fixtures" },
-      { label: "Base Construction", value: "Heavy Stress-Relieved Welded Fabricated Frame / Solid C45" },
-      { label: "Locating Elements", value: "Hardened OHNS Diamond & Round Locating Pins (60 HRC)" },
-      { label: "Clamping Mechanism", value: "Destaco Manual Toggles / Festo Pneumatic Swing Clamps" },
-      { label: "Surface Treatment", value: "Chemical Blackening / Hard Anodize / Electroless Nickel" },
-      { label: "Dimensional Report", value: "Comprehensive CMM Inspection Certificate Provided" },
-      { label: "Modularity", value: "Standardized Grid Pattern for Rapid Retooling" },
+      { label: "Part Classification", value: "Custom Heavy-Duty Industrial Mechanical Parts" },
+      { label: "Material Grades", value: "EN Series / Stainless Steel / Phosphor Bronze / C45" },
+      { label: "Machining Capabilities", value: "Multi-Axis CNC Milling, Turning & Cylindrical Grinding" },
+      { label: "Surface Finishing", value: "Blackodizing / Electroless Nickel / Hard Chrome" },
+      { label: "Inspection Standards", value: "CMM Coordinate Metrology + Surface Profilometer" },
+      { label: "Heat Treatment", value: "Case Carburizing / Nitriding / Vacuum Quenching" },
+      { label: "Quality Compliance", value: "ISO 9001:2015 Continuous Quality Assured" },
     ],
   },
   {
@@ -377,6 +377,9 @@ export function getProductBySlug(slug: string): ProductItem | undefined {
   }
   if (slug === "rubber-moulding-die") {
     return productsData.find((p) => p.slug === "rubber-die-moulding");
+  }
+  if (slug === "jig-fixtures-manufacturing") {
+    return productsData.find((p) => p.slug === "industrial-parts");
   }
   return productsData.find((p) => p.slug === slug);
 }
