@@ -37,7 +37,7 @@ What happens next:
 Need urgent assistance?
 Call our direct engineering desk:
 +91 97243 24427 / +91 99742 96091 / +91 97243 24426
-Email: info@jaytechindustries.com
+Email: jaytech_81@yahoo.co.in
 Address: A-54/1, Bileshwar Industrial Estate, Opp. GVMM, Odhav, Ahmedabad, Gujarat – 382418, India
 
 Warm regards,
@@ -204,7 +204,7 @@ https://jaytechindustries.com
                     <div style="font-size: 13px; font-weight: 700; color: #9a3412; margin-bottom: 4px;">Need Immediate Assistance or Have Additional Drawings?</div>
                     <div style="font-size: 13px; color: #7c2d12; line-height: 1.5;">
                       Direct phone: <a href="tel:+919724324427" style="color: #FC5506; font-weight: 600; text-decoration: none;">+91 97243 24427</a> / <a href="tel:+919974296091" style="color: #FC5506; font-weight: 600; text-decoration: none;">+91 99742 96091</a><br>
-                      Email: <a href="mailto:info@jaytechindustries.com" style="color: #FC5506; font-weight: 600; text-decoration: none;">info@jaytechindustries.com</a>
+                      Email: <a href="mailto:jaytech_81@yahoo.co.in" style="color: #FC5506; font-weight: 600; text-decoration: none;">jaytech_81@yahoo.co.in</a>
                     </div>
                   </td>
                 </tr>

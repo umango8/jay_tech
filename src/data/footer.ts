@@ -35,7 +35,7 @@ export const footerData = {
     { display: "+91 99742 96091", raw: "+919974296091" },
     { display: "+91 97243 24426", raw: "+919724324426" },
   ] as FooterPhone[],
-  email: "info@jaytechindustries.com",
+  email: "jaytech_81@yahoo.co.in",
   googleMapsUrl: "https://maps.google.com/?q=A-54%2F1+Bileshwar+Industrial+Estate+Odhav+Ahmedabad",
   locationTagline: "Precision engineering · Odhav, Ahmedabad · Est. 2007",
   precisionBadge: "BUILT ON PRECISION",
