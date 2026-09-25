@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] lg:min-h-[780px] flex flex-col justify-between overflow-hidden pt-20"
+      className="relative min-h-screen flex flex-col justify-between overflow-hidden pt-20"
     >
       <img
         src={getImageSrc(heroImage)}

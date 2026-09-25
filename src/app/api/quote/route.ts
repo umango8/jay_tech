@@ -5,6 +5,8 @@ import { QuoteFormData } from "@/lib/mail/types";
 // Maximum upload file size: 10MB
 const MAX_FILE_SIZE = 10 * 1024 * 1024;
 
+export const dynamic = "force-dynamic";
+
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();

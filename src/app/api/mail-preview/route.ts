@@ -3,6 +3,8 @@ import { renderAdminQuoteEmail } from "@/lib/mail/templates/adminQuoteEmail";
 import { renderClientQuoteEmail } from "@/lib/mail/templates/clientQuoteEmail";
 import { QuoteFormData } from "@/lib/mail/types";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const template = searchParams.get("template") || "client";
